@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let tabBarHeight  : CGFloat = 49;    //emperically deduced
     let stdIconHeight : CGFloat = 40;    //emperically deduced
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
+        self.window = UIWindow.init(frame: UIScreen.main.bounds);
         
         let N : Int = 4;
   
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func setMiscBackgroundColor(view : UIView) {
+    func setMiscBackgroundColor(_ view : UIView) {
         
          let redC   : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
          let greenC : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
@@ -70,11 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func addMiscViewLabel(view : UIView, vc :UIViewController) {
+    func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
         
-        let l : UILabel = UILabel(frame: UIScreen.mainScreen().bounds);
+        let l : UILabel = UILabel(frame: UIScreen.main.bounds);
         l.text = "The subViews of tab '\(vc.title!)' will go here";
-        l.textAlignment = .Center;
+        l.textAlignment = .center;
  
         view.addSubview(l);
 
@@ -83,13 +83,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     //todo - load image based on index!
-    func addTabImage(index : Int, navController : UINavigationController) {
+    func addTabImage(_ index : Int, navController : UINavigationController) {
         
         var unselected : UIImage = UIImage(named: "Triangle-Right")!;
         var selected   : UIImage = UIImage(named: "Fast-Backward")!;
         
-        unselected = unselected.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-        selected   =   selected.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        unselected = unselected.withRenderingMode(UIImageRenderingMode.alwaysOriginal);
+        selected   =   selected.withRenderingMode(UIImageRenderingMode.alwaysOriginal);
         
         navController.tabBarItem.image         = unselected;
         navController.tabBarItem.selectedImage = selected;
@@ -98,10 +98,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    func applicationWillResignActive(application: UIApplication)    { return; }
-    func applicationDidEnterBackground(application: UIApplication)  { return; }
-    func applicationWillEnterForeground(application: UIApplication) { return; }
-    func applicationDidBecomeActive(application: UIApplication)     { return; }
-    func applicationWillTerminate(application: UIApplication)       { return; }
+    func applicationWillResignActive(_ application: UIApplication)    { return; }
+    func applicationDidEnterBackground(_ application: UIApplication)  { return; }
+    func applicationWillEnterForeground(_ application: UIApplication) { return; }
+    func applicationDidBecomeActive(_ application: UIApplication)     { return; }
+    func applicationWillTerminate(_ application: UIApplication)       { return; }
 }
 

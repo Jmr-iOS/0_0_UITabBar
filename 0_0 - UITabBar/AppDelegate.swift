@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var views : [UIView] = [UIView]();
+    @objc var views : [UIView] = [UIView]();
     
-    var navs  : [UINavigationController] = [UINavigationController]();
+    @objc var navs  : [UINavigationController] = [UINavigationController]();
     
-    let tabBarHeight  : CGFloat = 49;    //emperically deduced
-    let stdIconHeight : CGFloat = 40;    //emperically deduced
+    @objc let tabBarHeight  : CGFloat = 49;    //emperically deduced
+    @objc let stdIconHeight : CGFloat = 40;    //emperically deduced
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func setMiscBackgroundColor(_ view : UIView) {
+    @objc func setMiscBackgroundColor(_ view : UIView) {
         
          let redC   : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
          let greenC : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
+    @objc func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
         
         let l : UILabel = UILabel(frame: UIScreen.main.bounds);
         l.text = "The subViews of tab '\(vc.title!)' will go here";
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     //todo - load image based on index!
-    func addTabImage(_ index : Int, navController : UINavigationController) {
+    @objc func addTabImage(_ index : Int, navController : UINavigationController) {
         
         var unselected : UIImage = UIImage(named: "Triangle-Right")!;
         var selected   : UIImage = UIImage(named: "Fast-Backward")!;

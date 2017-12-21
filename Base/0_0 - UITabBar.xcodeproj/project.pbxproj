@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0BD5BC41FEC4FF7000F8DE3 /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD5BC21FEC4FF7000F8DE3 /* UITabBar.swift */; };
+		D0BD5BC41FEC4FF7000F8DE3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD5BC21FEC4FF7000F8DE3 /* TabBar.swift */; };
 		D0BD5BC51FEC4FF7000F8DE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD5BC31FEC4FF7000F8DE3 /* AppDelegate.swift */; };
 		D0BD5BCC1FEC5026000F8DE3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D0BD5BC81FEC5026000F8DE3 /* Base.lproj */; };
 		D0BD5BCD1FEC5026000F8DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BD5BC91FEC5026000F8DE3 /* Assets.xcassets */; };
@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		D039B4B61BF4D7950024005F /* 0_0 - UITabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UITabBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0BD5BC21FEC4FF7000F8DE3 /* UITabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBar.swift; path = ../UITabBar.swift; sourceTree = "<group>"; };
+		D0BD5BC21FEC4FF7000F8DE3 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = ../TabBar.swift; sourceTree = "<group>"; };
 		D0BD5BC31FEC4FF7000F8DE3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D0BD5BC71FEC5026000F8DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0BD5BC81FEC5026000F8DE3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			children = (
 				D0BD5BC61FEC5007000F8DE3 /* Base */,
 				D0BD5BC31FEC4FF7000F8DE3 /* AppDelegate.swift */,
-				D0BD5BC21FEC4FF7000F8DE3 /* UITabBar.swift */,
+				D0BD5BC21FEC4FF7000F8DE3 /* TabBar.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BD5BC51FEC4FF7000F8DE3 /* AppDelegate.swift in Sources */,
-				D0BD5BC41FEC4FF7000F8DE3 /* UITabBar.swift in Sources */,
+				D0BD5BC41FEC4FF7000F8DE3 /* TabBar.swift in Sources */,
 				D0BD5BCE1FEC5026000F8DE3 /* Stdcomments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

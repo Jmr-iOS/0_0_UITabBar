@@ -1,13 +1,21 @@
-//
-//  AppDelegate.swift
-//  0_0 - UITabBar
-//
-//  URL: http://stackoverflow.com/questions/24046898/how-do-i-create-a-new-swift-project-without-using-storyboards
-//  URL: http://stackoverflow.com/questions/24030348/how-to-create-a-button-programmatically
-//  URL: http://stackoverflow.com/questions/24102191/make-a-uibutton-programatically-in-swift
-//
-
+/************************************************************************************************************************************/
+/** @file       AppDelegate.swift
+ *  @project    0_0 - UITabBar
+ *  @brief      x
+ *  @details    x
+ *
+ * @section    Opens
+ *      drop as many @objc's as possible
+ *      comment all function headers
+ *      clean up code
+ *
+ * @section    Legal Disclaimer
+ *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
+ *      Corporation. Do not distribute. Do not copy.
+ */
+/************************************************************************************************************************************/
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc let tabBarHeight  : CGFloat = 49;    //emperically deduced
     @objc let stdIconHeight : CGFloat = 40;    //emperically deduced
     
+    
+    /********************************************************************************************************************************/
+    /** @fcn        init()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds);
@@ -46,11 +61,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navs.append(newNavC);
         }
 
-        let main_tab : UITabBarController = UITabBarController();
+        let main_tab : TabBar = TabBar();
         
-        main_tab.viewControllers = navs;
+        let tbc : UITabBarController = main_tab.getUITabBarController();
+        
+        tbc.viewControllers = navs;
 
-        self.window?.rootViewController = main_tab;
+        self.window?.rootViewController = tbc;
         
         self.window?.makeKeyAndVisible();
 
@@ -58,7 +75,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    @objc func setMiscBackgroundColor(_ view : UIView) {
+    /********************************************************************************************************************************/
+    /** @fcn        init()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func setMiscBackgroundColor(_ view : UIView) {
         
          let redC   : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
          let greenC : CGFloat = CGFloat(arc4random_uniform(255))/CGFloat(255);
@@ -70,7 +93,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    @objc func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
+    /********************************************************************************************************************************/
+    /** @fcn        init()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
         
         let l : UILabel = UILabel(frame: UIScreen.main.bounds);
         l.text = "The subViews of tab '\(vc.title!)' will go here";
@@ -82,8 +111,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        init()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     //todo - load image based on index!
-    @objc func addTabImage(_ index : Int, navController : UINavigationController) {
+    func addTabImage(_ index : Int, navController : UINavigationController) {
         
         var unselected : UIImage = UIImage(named: "Triangle-Right")!;
         var selected   : UIImage = UIImage(named: "Fast-Backward")!;
